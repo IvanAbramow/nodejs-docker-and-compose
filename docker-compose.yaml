@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
 
   backend:
@@ -26,6 +24,8 @@ services:
       - "8081:80"
     networks:
       - external
+    depends_on:
+      - backend
 
   database:
     container_name: "postgres"
